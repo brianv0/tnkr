@@ -52,8 +52,13 @@ MEDIA_URL = ''
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/media/'
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '!gk$$w%ryhy&9fqil2x$33veva25m%r3_y*tk3k2cwcj70-b)5'
+# This is obsolete, I'm using @https://github.com/dwaiter/django-bcrypt 
+SECRET_KEY = ''
+#django bcrypt settings
+BCRYPT_ENABLED = True
+BCRYPT_ROUNDS = 12
+BCRYPT_MIGRATE = True
+
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -77,6 +82,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'django_bcrypt',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

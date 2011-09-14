@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{% block title %}{% endblock %}</title>
+
+
+
+
+  <link rel="stylesheet" href="http://www.tnkr.net/media/blog/css/screen.css" type="text/css" media="screen" charset="utf-8"> 
+  <link rel="stylesheet" href="http://www.tnkr.net/media/blog/css/print.css" type="text/css" media="print" charset="utf-8"> 
+
+  <script src="http://media.nathanborror.com/javascript/jquery.js?v=4" type="text/javascript" charset="utf-8"></script>
+  <script src="http://media.nathanborror.com/javascript/bootstrap.js?v=4" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
+
+    <div id="header">
+	      <h1><a href="/">Brian Van Klaveren</a></h1>
+	      <ul id="navigation">
+	        <li class="home"><a href="." title="Home">Home</a></li>
+	        <li class="about"><a href="/home/blog/about/" title="About">About</a></li>
+	        <li class="posts"><a href="home/blog/posts/" title="Posts">Posts</a></li>
+	        <li class="projects"><a href="home/blog/projects/" title="Projects">Projects</a></li>
+	        <li class="lab"><a href="/laboratory/" title="Lab">Lab</a></li>
+	        <li class="sketchbook"><a href="/sketchbook/" title="Sketchbook">Sketchbook</a></li>
+	        <li class="photos"><a href="/photos/" title="Photos">Photos</a></li>
+	        <li class="courses"><a href="http://courses.nathanborror.com/" title="Courses">Courses</a></li>
+	        <li class="library"><a href="http://readernaut.com/nathan/" title="Library">Library</a></li>
+	        <li class="contact"><a href="/contact/" title="Contact">Contact</a></li>
+	        <li class="blank1"><a href="/">Blank 1</a></li>
+	        <li class="blank2"><a href="/">Blank 2</a></li>
+	      </ul>
+	    </div>
+
+  <div id="body">
+    {% block body %}
+      <div class="content_title">
+        {% block content_title %}{% endblock %}
+      </div>
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+    {% endblock %}
+  </div>
+</body>
+</html>
